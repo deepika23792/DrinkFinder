@@ -44,7 +44,7 @@ const SearchBar = ({ sendData, setNFound, setResetState }) => {
             SetWarning("Please Enter a drink Name")
             setTimeout(() => {
                 SetWarning("")
-            }, 5000)
+            }, 2000)
         }
     }
 
