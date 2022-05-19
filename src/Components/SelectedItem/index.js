@@ -1,9 +1,8 @@
-import { React, useEffect, useState } from "react";
-import { Container, Row, Col, Carousel, ListGroup, CarouselItem } from "react-bootstrap";
+import { React, useState } from "react";
+import { Container, Row, Col, ListGroup } from "react-bootstrap";
 import drinksImages from "./data";
 import ImageModal from "../ImageModal"
 import CarouselImg from "../CarouselImg";
-import './style.css'
 
 const SelectedItem = (props) => {
     const [modalShow, setModalShow] = useState(false);
@@ -13,9 +12,7 @@ const SelectedItem = (props) => {
 
     if (data) {
         for (var i = 1; i <= 15; i++) {
-            var a = (data["strIngredient" + i] != null)
             ingredients += (data && (data["strIngredient" + i] != null) && (data["strIngredient" + i] + ", ")) || ""
-
         }
         ingredients = ingredients.slice(0, -2)
         if (ingredients.length > 60) {
@@ -25,7 +22,6 @@ const SelectedItem = (props) => {
         if (inst.length > 75) {
             inst = inst.slice(0, 60) + "..."
         }
-
     }
 
     const showModal = () => {

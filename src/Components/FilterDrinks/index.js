@@ -3,20 +3,20 @@ import { InputGroup, FormControl, DropdownButton, Dropdown } from "react-bootstr
 import "./style.css"
 
 const FilterDrink = ({ drinkList, setCustomizedData, resetState, setResetState }) => {
-    const prevState = useRef({ resetState }).current;
     const [filterDrinkType, SetfilterDrink] = useState("Select")
     const valueofInput = useRef();
     const allDrinksList = drinkList;
     useEffect(() => {
         valueofInput.current.value = ""
         SetfilterDrink("Select")
+        setResetState(false)
     }, [resetState])
     const filterDrinkBy = (type) => {
 
         if (type === "Category" || type === "Ingredient") {
-            setResetState(false)
+
             SetfilterDrink(type === "Category" ? "Category" : type === "Ingredient" ? "Ingredient" : "Select")
-            const updatedDrinkList = allDrinksList && allDrinksList.filter((item, i) => {
+            const updatedDrinkList = allDrinksList && allDrinksList.filter((item, key) => {
                 if (type === "Category") {
                     return ((item.strCategory).toLowerCase()).includes(valueofInput.current.value)
                 } else if (type === "Ingredient") {
@@ -25,8 +25,6 @@ const FilterDrink = ({ drinkList, setCustomizedData, resetState, setResetState }
                             return ((item["strIngredient" + i]).toLowerCase()).includes(valueofInput.current.value)
                         }
                     }
-                } else {
-                    return
                 }
 
             })

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { InputGroup, Badge, FormControl, Button, Image, Container, Row, Col, ListGroup } from 'react-bootstrap'
+import { Image, Row, Col, ListGroup } from 'react-bootstrap'
 import SelectedItem from '../SelectedItem'
 import './style.css'
 

@@ -17,12 +17,9 @@
 
 .setList::-webkit-scrollbar {
     width: 5px;
-    /* Remove scrollbar space */
     background: transparent;
-    /* Optional: just make scrollbar invisible */
 }
 
-/* Optional: show position indicator in red */
 .setList::-webkit-scrollbar-thumb {
     background: #969292;
     border-radius: 15pt;

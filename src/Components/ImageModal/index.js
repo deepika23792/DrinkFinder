@@ -7,7 +7,6 @@ const ImageModal = (props) => {
     const images = props.images
     return (
         <div className='modalsImg'>
-            {/* hi */}
             <Modal
                 {...props}
                 size="lg"

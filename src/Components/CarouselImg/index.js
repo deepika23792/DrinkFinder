@@ -16,7 +16,6 @@ const CarouselImg = ({ drinksImages }) => {
                         </Carousel.Item>
                     )
                 })
-
                 }
             </Carousel>
         </>

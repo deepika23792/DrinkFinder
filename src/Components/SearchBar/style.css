@@ -1,9 +1,7 @@
 .setPosition {
     position: absolute;
     z-index: 99;
-    /* height: 32px; */
     overflow: hidden;
-    /* border: 1px solid lightgrey; */
     padding: 0 !important;
     border-radius: 0px;
     overflow-x: scroll;
@@ -11,7 +9,6 @@
 }
 
 .position {
-    /* width: 77% !important; */
     margin: 0 auto !important;
     border-radius: 0px;
     padding-right: 5.5%;
@@ -37,9 +34,7 @@
 
 .setPosition::-webkit-scrollbar {
     height: 5px;
-    /* Remove scrollbar space */
     background: transparent;
-    /* Optional: just make scrollbar invisible */
 }
 
 .setPosition::-webkit-scrollbar-thumb {

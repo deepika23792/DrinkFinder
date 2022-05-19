@@ -8,6 +8,7 @@ const SortDrinks = ({ drinkList, setCustomizedData, resetState, setResetState })
     useEffect(() => {
         if (setResetState) {
             SetSort("Select")
+            setResetState(false)
         }
     }, [resetState])
 
@@ -37,7 +38,6 @@ const SortDrinks = ({ drinkList, setCustomizedData, resetState, setResetState })
 
     const SortBy = (type) => {
         SetSort(type === "name" ? "Name" : "Date")
-        setResetState(false)
         var sortedList;
         if (type === "name") {
             sortedList = (drinkList.slice().sort(compare("strDrink")))

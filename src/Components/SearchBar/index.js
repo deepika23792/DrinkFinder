@@ -1,5 +1,5 @@
 import { React, useEffect, useState, useRef } from "react";
-import { InputGroup, FormControl, Button, Container, Row, Col, ListGroup } from 'react-bootstrap'
+import { InputGroup, FormControl, Button, Container, Row, Col } from 'react-bootstrap'
 import './style.css'
 
 const SearchBar = ({ sendData, setNFound, setResetState }) => {
@@ -8,19 +8,13 @@ const SearchBar = ({ sendData, setNFound, setResetState }) => {
     const [warning, SetWarning] = useState("");
     const [saveSearch, SetSaveSearch] = useState([]);
     const [showSearchHistory, SetShowSearchHistory] = useState(false)
-    const isFirstRender = useRef(true)
 
     useEffect(() => {
         const localstoragesearchData = JSON.parse(localStorage.getItem('searchHistory')) || []
-        if (isFirstRender.current) {
-            isFirstRender.current = false
-            SetSaveSearch(localstoragesearchData)
-            return;
-        }
-    })
+        SetSaveSearch(localstoragesearchData)
+    }, [])
 
     useEffect(() => {
-
         saveSearch.length != 0 && localStorage.setItem('searchHistory', JSON.stringify(saveSearch.slice(-5).reverse()))
     }, [saveSearch])
 

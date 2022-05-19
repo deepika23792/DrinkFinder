@@ -25,7 +25,7 @@ const Home = () => {
     return (
         <div className="homeContainer">
             <div className="logo">
-                <img src="/drinksImg/logo.png" />
+                <img src="/drinksImg/logo.png" alt="logo" />
             </div>
             <SearchBar sendData={SetGetData} setNFound={setNFound} setResetState={setResetState} />
             {(!(getData === null) && !(getData === undefined)) ? <><Row className="filterDrinkConatiner">
