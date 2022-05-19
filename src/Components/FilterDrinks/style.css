@@ -1,0 +1,22 @@
+.editfilter {
+    flex-direction: column;
+    width: 71% !important;
+}
+
+.alterInputWidth {
+    width: 100% !important;
+}
+
+.editfilter input {
+    border-radius: 0px !important;
+    margin-left: 0px !important;
+}
+
+.editfilter button {
+    border-radius: 0px !important;
+    border-color: #cccdcd !important;
+}
+
+.editfilter .dropdown-menu {
+    width: 100% !important;
+}

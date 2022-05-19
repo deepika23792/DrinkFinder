@@ -1,0 +1,48 @@
+.setPosition {
+    position: absolute;
+    z-index: 99;
+    /* height: 32px; */
+    overflow: hidden;
+    /* border: 1px solid lightgrey; */
+    padding: 0 !important;
+    border-radius: 0px;
+    overflow-x: scroll;
+    width: 21.5% !important;
+}
+
+.position {
+    /* width: 77% !important; */
+    margin: 0 auto !important;
+    border-radius: 0px;
+    padding-right: 5.5%;
+
+}
+
+#searchDrink {
+    background-color: #12c2fd;
+    color: white;
+    border-color: #12c2fd;
+}
+
+.searchHistoryBoxContainer {
+    display: flex
+}
+
+.searchHistoryBox {
+    cursor: pointer;
+    border: 1px solid lightgrey;
+    padding: 1% 2%;
+    flex-grow: 1;
+}
+
+.setPosition::-webkit-scrollbar {
+    height: 5px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+.setPosition::-webkit-scrollbar-thumb {
+    background: #969292;
+    border-radius: 15pt;
+}

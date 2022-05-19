@@ -1,0 +1,46 @@
+.setList {
+    height: 330px;
+    overflow: auto;
+    box-sizing: content-box;
+    border: 1px solid #dee2e6;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+.detailsContainer {
+    border: 1px solid lightgrey;
+    width: 75%;
+    margin: auto !important;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.setList::-webkit-scrollbar {
+    width: 5px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+.setList::-webkit-scrollbar-thumb {
+    background: #969292;
+    border-radius: 15pt;
+}
+
+.categories {
+    overflow-y: scroll;
+}
+
+.leftAlign {
+    text-align: left;
+}
+
+.alignItem {
+    border: 1px solid lightgrey;
+    height: 340px;
+    margin-top: 4.7%;
+    padding: 2%;
+    align-items: center;
+    display: flex;
+}
